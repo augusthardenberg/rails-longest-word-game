@@ -1,10 +1,153 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+:root {
+  font-family: system-ui, sans-serif;
+  color: #252719;
+  background: #f4f3eb;
+}
+
+body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 1.5rem 0;
+}
+
+.letter {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  aspect-ratio: 1;
+  border: 1px solid #c8c9b8;
+  border-radius: 0.65rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgb(37 39 25 / 8%);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #deded2;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(37 39 25 / 7%);
+}
+
+.form input,
+.form button {
+  min-height: 2.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.55rem;
+  font: inherit;
+}
+
+.form input {
+  border: 1px solid #b9bba9;
+}
+
+.form input:focus-visible,
+.form button:focus-visible {
+  outline: 3px solid #b5bd75;
+  outline-offset: 2px;
+}
+
+.form button {
+  border: 0;
+  background: #646d2f;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.form button:hover {
+  background: #505825;
+}
+
+.form button:active {
+  transform: translateY(1px);
+}
+
+.score-title {
+  margin: 2rem 0 1rem;
+  color: #3f4720;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.score-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border: 1px solid #deded2;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(37 39 25 / 8%);
+}
+
+.score-card p {
+  margin: 0;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #eee;
+  line-height: 1.5;
+}
+
+.score-card p:last-child {
+  border-bottom: 0;
+}
+
+.score-card strong {
+  color: #646d2f;
+}
+
+.score-message {
+  margin-top: 0.5rem !important;
+  color: #3f4720;
+  font-weight: 600;
+}
+
+.score-actions {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto 2rem;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.55rem;
+  background: #646d2f;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.button-link:hover {
+  background: #505825;
+}
+
+.button-link:active {
+  transform: translateY(1px);
+}
+
+.button-link:focus-visible {
+  outline: 3px solid #b5bd75;
+  outline-offset: 3px;
+}

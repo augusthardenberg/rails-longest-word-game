@@ -1,0 +1,13 @@
+<h1 class="score-title">Your score:</h1>
+
+<div class="container score-card">
+  <p><strong>The token:</strong> <%= @token.split("").join(" | ").upcase %></p>
+  <p><strong>Your Guess:</strong> <%= @guess %></p>
+  <p><strong>Time Taken:</strong> <%= @result[:time] %>s</p>
+  <p><strong>Your Score:</strong> <%= @result[:score].to_f.ceil(4) %></p>
+  <p class="score-message">Message: <%= @result[:message] %></p>
+</div>
+
+<div class="score-actions">
+  <%= link_to "Continue", "http://127.0.0.1:3000/new", class: "button-link" %>
+</div>
